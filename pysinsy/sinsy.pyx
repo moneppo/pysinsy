@@ -132,7 +132,7 @@ cdef class Sinsy(object):
     def addNote(self, duration, lyric, pitch, accent, staccato, tieType, slurType, syllabicType, breath):
         return self.ptr.addNote(duration, lyric, pitch, accent, staccato, tieType, slurTpe, syllabicType, breath)
     
-    bool addRest(duration):
+    def addRest(duration):
         return self.ptr.addRest(duration)
 
     def createLabelData(self, monophoneFlag=False, overwriteEnableFlag=1, timeFlag=1):
