@@ -31,7 +31,7 @@ cdef extern from "sinsy.h" namespace "sinsy":
       bool addTempoMark(double tempo);
       bool addSuddenDynamicsMark(size_t suddenDynamicsType);
       bool addGradualDynamicsMark(size_t gradualDynamicsType);
-      bool addNote(size_t duration, const std::string& lyric, size_t pitch, bool accent, bool staccato, size_t tieType, size_t slurType, size_t syllabicType, bool breath = false);
+      bool addNote(size_t duration, const string& lyric, size_t pitch, bool accent, bool staccato, size_t tieType, size_t slurType, size_t syllabicType, bool breath = false);
       bool addRest(size_t duration);
 
       bool synthesize(SynthCondition* condition)
