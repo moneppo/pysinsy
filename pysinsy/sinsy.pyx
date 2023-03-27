@@ -130,6 +130,8 @@ cdef class Sinsy(object):
         return self.ptr.addGradualDynamicsMark(type)
 
     def addNote(self, duration, lyric, pitch, accent, staccato, tieType, slurType, syllabicType, breath):
+        if isinstance(lyric, str):
+            lyric = lyric.encode()
         return self.ptr.addNote(duration, lyric, pitch, accent, staccato, tieType, slurType, syllabicType, breath)
     
     def addRest(self, duration):
