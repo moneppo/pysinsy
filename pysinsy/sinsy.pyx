@@ -114,25 +114,25 @@ cdef class Sinsy(object):
         """
         return self.ptr.setVolume(volume)
     
-    def addKeyMark(modeType, fifths):
+    def addKeyMark(self, modeType, fifths):
         return self.ptr.addKeyMark(modeType, fifths)
     
-    def addBeatMark(beats, beattype):
+    def addBeatMark(self, beats, beattype):
         return self.ptr.addBeatMark(beats, beattype)
     
-    def addTempoMark(tempo):
+    def addTempoMark(self, tempo):
         return self.ptr.addTempoMark(tempo)
     
-    def addSuddenDynamicsMark(type):
+    def addSuddenDynamicsMark(self, type):
         return self.ptr.addSuddenDynamicsMark(type)
     
-    def addGradualDynamicsMark(type):
+    def addGradualDynamicsMark(self, type):
         return self.ptr.addGradualDynamicsMark(type)
 
     def addNote(self, duration, lyric, pitch, accent, staccato, tieType, slurType, syllabicType, breath):
         return self.ptr.addNote(duration, lyric, pitch, accent, staccato, tieType, slurTpe, syllabicType, breath)
     
-    def addRest(duration):
+    def addRest(self, duration):
         return self.ptr.addRest(duration)
 
     def createLabelData(self, monophoneFlag=False, overwriteEnableFlag=1, timeFlag=1):
