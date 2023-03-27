@@ -26,13 +26,13 @@ cdef extern from "sinsy.h" namespace "sinsy":
 
       LabelStrings* createLabelData(bool monophoneFlag, int overwriteEnableFlag, int timeFlag)
       
-      bool addKeyMark(size_t modeType, int fifths);
-      bool addBeatMark(size_t beats, size_t beattype);
-      bool addTempoMark(double tempo);
-      bool addSuddenDynamicsMark(size_t suddenDynamicsType);
-      bool addGradualDynamicsMark(size_t gradualDynamicsType);
-      bool addNote(size_t duration, const string& lyric, size_t pitch, bool accent, bool staccato, size_t tieType, size_t slurType, size_t syllabicType, bool breath = false);
-      bool addRest(size_t duration);
+      bool addKeyMark(size_t modeType, int fifths)
+      bool addBeatMark(size_t beats, size_t beattype)
+      bool addTempoMark(double tempo)
+      bool addSuddenDynamicsMark(size_t suddenDynamicsType)
+      bool addGradualDynamicsMark(size_t gradualDynamicsType)
+      bool addNote(size_t duration, const string& lyric, size_t pitch, bool accent, bool staccato, size_t tieType, size_t slurType, size_t syllabicType, bool breath)
+      bool addRest(size_t duration)
 
       bool synthesize(SynthCondition* condition)
       bool stop()
